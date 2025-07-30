@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const Header = () => {
   return (
-    <header className="py-8 bg-background relative overflow-hidden">
+    <header className="py-8 md:py-8 py-4 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_hsl(var(--hunter-green))_0%,_transparent_50%)]" />
@@ -19,9 +19,9 @@ const Header = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 py-8 relative z-10">
+      <div className="container mx-auto px-6 py-4 md:py-8 relative z-10">
         {/* Navigation */}
-        <nav className="flex items-center justify-between mb-16">
+        <nav className="flex items-center justify-between mb-8 md:mb-16">
           <div className="text-2xl font-playfair font-bold text-hunter-green">
             LawAdPro
           </div>

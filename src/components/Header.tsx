@@ -3,11 +3,20 @@ import { Card } from "@/components/ui/card";
 
 const Header = () => {
   return (
-    <header className="min-h-screen bg-gradient-to-br from-ivory via-background to-soft-gray relative overflow-hidden">
+    <header className="py-8 bg-gradient-to-br from-ivory via-background to-soft-gray relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_hsl(var(--hunter-green))_0%,_transparent_50%)]" />
         <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,_hsl(var(--accent))_0%,_transparent_50%)]" />
+      </div>
+      
+      {/* Professional Photo Background */}
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
+          alt="Professional marketing expert"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="container mx-auto px-6 py-8 relative z-10">
@@ -70,15 +79,6 @@ const Header = () => {
 
           {/* Right Column - Form */}
           <div className="relative h-fit">
-            {/* Background Image */}
-            <div className="absolute inset-0 opacity-70 rounded-2xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
-                alt="Professional marketing expert"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
             {/* Contact Form */}
             <Card className="relative p-6 bg-background/85 backdrop-blur-sm border-hunter-green/20 shadow-lg">
               <h3 className="text-xl font-playfair font-bold text-hunter-green mb-4 text-center lg:text-left">

@@ -22,9 +22,9 @@ const Services = () => {
       description: "Real-time insights into your campaign performance with custom dashboards designed specifically for employment law metrics. Track what matters most to your practice.",
       features: [
         "Real-time performance tracking",
-        "Employment law specific metrics",
+        "Competitive analysis",
         "Custom ROI calculations",
-        "Monthly strategic reports"
+        "AI integrations"
       ]
     },
     {
@@ -75,13 +75,13 @@ const Services = () => {
                 </p>
               </div>
 
-              <p className="text-dark-gray mb-6 font-inter leading-relaxed">
+              <p className="text-dark-gray mb-6 font-inter leading-relaxed text-center">
                 {service.description}
               </p>
 
               <ul className="space-y-3">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm font-inter">
+                  <li key={featureIndex} className="flex items-center justify-center text-sm font-inter">
                     <CheckCircle className="w-4 h-4 text-hunter-green mr-3 flex-shrink-0" />
                     <span className="text-dark-gray">{feature}</span>
                   </li>

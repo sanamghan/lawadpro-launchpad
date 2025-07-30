@@ -30,7 +30,7 @@ const Header = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-end">
           {/* Left Column - Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-6">
@@ -71,7 +71,7 @@ const Header = () => {
           {/* Right Column - Form */}
           <div className="relative h-fit">
             {/* Background Image */}
-            <div className="absolute inset-0 opacity-40 rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 opacity-70 rounded-2xl overflow-hidden">
               <img 
                 src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
                 alt="Professional marketing expert"
@@ -80,7 +80,7 @@ const Header = () => {
             </div>
             
             {/* Contact Form */}
-            <Card className="relative p-6 bg-background/95 backdrop-blur-sm border-hunter-green/20 shadow-lg">
+            <Card className="relative p-6 bg-background/85 backdrop-blur-sm border-hunter-green/20 shadow-lg">
               <h3 className="text-xl font-playfair font-bold text-hunter-green mb-4 text-center lg:text-left">
                 Get Your Free Strategy Call
               </h3>

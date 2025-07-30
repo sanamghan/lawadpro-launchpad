@@ -98,7 +98,6 @@ const Footer = () => {
             <ul className="space-y-2 text-ivory/80 font-inter">
               <li>Google Ads Management</li>
               <li>Custom Dashboard Reporting</li>
-              <li>Landing Page Optimization</li>
               <li>Employment Law Marketing</li>
               <li>State Exclusivity Programs</li>
             </ul>

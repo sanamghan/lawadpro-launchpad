@@ -13,9 +13,9 @@ const Header = () => {
       {/* Professional Photo Background */}
       <div className="absolute inset-0 opacity-10">
         <img 
-          src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
+          src="/lovable-uploads/040c0b43-559d-43a0-b305-3eba19a6613a.png"
           alt="Professional marketing expert"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 

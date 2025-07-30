@@ -36,7 +36,7 @@ const CaseStudy = () => {
             <span className="italic text-accent block">Sparrow Law LLP</span>
           </h2>
           <p className="text-xl text-dark-gray max-w-3xl mx-auto font-inter leading-relaxed">
-            How a boutique firm went from referral-based growth to a high-volume client acquisition machine — becoming one of the fastest-growing employment law firms in California.
+            How a newly launched employment law firm turned digital advertising into a growth engine — scaling client acquisition and establishing themselves as a leading practice in California.
           </p>
         </div>
 

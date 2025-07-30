@@ -21,7 +21,7 @@ const Header = () => {
 
       <div className="container mx-auto px-6 py-2 md:py-8 relative z-10">
         {/* Navigation */}
-        <nav className="flex items-center justify-between mb-4 md:mb-16">
+        <nav className="flex items-center justify-between mb-6 md:mb-16">
           <div className="text-2xl font-playfair font-bold text-hunter-green">
             LawAdPro
           </div>
@@ -43,7 +43,7 @@ const Header = () => {
           {/* Left Column - Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-playfair font-bold text-hunter-green leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-hunter-green leading-tight">
                 Scale Your
                 <span className="italic text-accent block">Employment Law</span>
                 Practice

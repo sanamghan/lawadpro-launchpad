@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const Header = () => {
   return (
-    <header className="py-8 bg-gradient-to-br from-ivory via-background to-soft-gray relative overflow-hidden">
+    <header className="py-8 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_hsl(var(--hunter-green))_0%,_transparent_50%)]" />

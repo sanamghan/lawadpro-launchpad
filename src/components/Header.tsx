@@ -32,7 +32,7 @@ const Header = () => {
         {/* Hero Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-playfair font-bold text-hunter-green leading-tight">
                 Scale Your
@@ -69,19 +69,19 @@ const Header = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="relative">
+          <div className="relative h-fit">
             {/* Background Image */}
-            <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 opacity-40 rounded-2xl overflow-hidden">
               <img 
                 src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
                 alt="Professional marketing expert"
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover"
               />
             </div>
             
             {/* Contact Form */}
-            <Card className="relative p-6 bg-background/90 backdrop-blur-sm border-hunter-green/20 shadow-lg">
-              <h3 className="text-xl font-playfair font-bold text-hunter-green mb-4">
+            <Card className="relative p-6 bg-background/95 backdrop-blur-sm border-hunter-green/20 shadow-lg">
+              <h3 className="text-xl font-playfair font-bold text-hunter-green mb-4 text-center lg:text-left">
                 Get Your Free Strategy Call
               </h3>
               <form className="space-y-4">

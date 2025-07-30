@@ -15,7 +15,7 @@ const Header = () => {
         <img 
           src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
           alt="Professional marketing expert"
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover object-top"
         />
       </div>
 

@@ -11,15 +11,9 @@ const CaseStudy = () => {
     },
     {
       icon: <DollarSign className="w-8 h-8 text-hunter-green" />,
-      value: "$2.8M",
+      value: "$xx",
       label: "In Case Settlements",
       description: "Generated from our lead campaigns"
-    },
-    {
-      icon: <Users className="w-8 h-8 text-hunter-green" />,
-      value: "127",
-      label: "New Clients Acquired",
-      description: "High-value employment law cases"
     },
     {
       icon: <Calendar className="w-8 h-8 text-hunter-green" />,
@@ -38,12 +32,11 @@ const CaseStudy = () => {
             <span className="text-hunter-green font-inter font-semibold text-sm">Case Study</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-hunter-green mb-6">
-            Regional Employment Law Firm
-            <span className="italic text-accent block">Scales to Market Leader</span>
+            California Employment Law Firm
+            <span className="italic text-accent block">Sparrow Law LLP</span>
           </h2>
           <p className="text-xl text-dark-gray max-w-3xl mx-auto font-inter leading-relaxed">
-            How a mid-sized employment law firm transformed their client acquisition 
-            and became the dominant practice in their state.
+            How a boutique firm went from referral-based growth to a high-volume client acquisition machine — becoming one of the fastest-growing employment law firms in California.
           </p>
         </div>
 
@@ -56,9 +49,7 @@ const CaseStudy = () => {
                 The Challenge
               </h3>
               <p className="text-dark-gray font-inter leading-relaxed">
-                A well-established employment law firm was struggling to compete with larger practices. 
-                Their previous marketing agency was generating low-quality leads at high costs, and they were 
-                losing potential clients to competitors with better digital presence.
+                As a newly established firm, Sparrow Law LLP initially relied on word-of-mouth referrals to build their caseload.
               </p>
             </Card>
 
@@ -67,9 +58,7 @@ const CaseStudy = () => {
                 Our Solution
               </h3>
               <p className="text-dark-gray font-inter leading-relaxed">
-                We implemented our state exclusivity model, rebuilt their Google Ads campaigns from the ground up, 
-                and created custom landing pages optimized for employment law conversions. Our employment law-specific 
-                keyword research and ad copy dramatically improved campaign performance.
+                We implemented our state exclusivity model, built their Google Ads campaigns from the ground up, and created custom strategy optimized for employment law conversions.
               </p>
             </Card>
 
@@ -78,9 +67,7 @@ const CaseStudy = () => {
                 The Results
               </h3>
               <p className="font-inter leading-relaxed opacity-90">
-                Within 6 months, they became the dominant employment law practice in their state, 
-                with a 340% increase in qualified leads and over $2.8M in case settlements directly 
-                attributable to our campaigns.
+                After launching targeted Google Ads campaigns, demand surged — with a consistent flow of high-intent leads driving significant case volume. The firm began frequently closing multiple monthly six-figure settlements and expanded their team to keep pace with growth.
               </p>
             </Card>
           </div>

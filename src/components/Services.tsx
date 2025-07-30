@@ -91,23 +91,6 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-hunter-green to-accent p-8 rounded-2xl text-center">
-            <h3 className="text-2xl font-playfair font-bold text-ivory mb-4">
-              Ready to Transform Your Practice?
-            </h3>
-            <p className="text-ivory/90 mb-6 font-inter">
-              Join the employment law firms already scaling with our proven system.
-            </p>
-            <a 
-              href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-ivory text-hunter-green font-semibold rounded-lg hover:bg-ivory/90 transition-colors duration-300"
-            >
-              Start Your Growth Journey
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

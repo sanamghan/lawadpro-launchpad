@@ -30,7 +30,7 @@ const Header = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -66,31 +66,21 @@ const Header = () => {
                 <div className="text-sm text-dark-gray font-inter">Ad Enhancements</div>
               </div>
             </div>
-
-            <Button variant="cta" size="xl" className="w-full md:w-auto">
-              Scale My Business
-            </Button>
           </div>
 
-          {/* Right Column - Image & Form */}
-          <div className="space-y-8">
-            {/* Professional Photo */}
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-soft-gray to-ivory p-1">
-                <img 
-                  src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
-                  alt="Professional marketing expert"
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-hunter-green text-ivory p-4 rounded-xl">
-                <div className="text-sm font-semibold font-inter">Google Ads Expert</div>
-                <div className="text-xs opacity-90">Employment Law Focus</div>
-              </div>
+          {/* Right Column - Form */}
+          <div className="relative">
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-20">
+              <img 
+                src="/lovable-uploads/f2cfcf4d-e542-43f3-a846-6c5a38024a5e.png"
+                alt="Professional marketing expert"
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
-
+            
             {/* Contact Form */}
-            <Card className="p-6 bg-background/80 backdrop-blur-sm border-hunter-green/20 shadow-lg">
+            <Card className="relative p-6 bg-background/90 backdrop-blur-sm border-hunter-green/20 shadow-lg">
               <h3 className="text-xl font-playfair font-bold text-hunter-green mb-4">
                 Get Your Free Strategy Call
               </h3>

@@ -124,7 +124,7 @@ const CaseStudy = () => {
               { month: "Month 1", title: "Campaign Setup", desc: "Account audit, keyword research, campaign build" },
               { month: "Month 2-3", title: "Optimization", desc: "A/B testing, bid adjustments, landing page optimization" },
               { month: "Month 4-5", title: "Scaling", desc: "Budget increases, expanded targeting, new campaign types" },
-              { month: "Month 6+", title: "Domination", desc: "Market leadership, consistent high-value leads" }
+              { month: "Month 6+", title: "Market Share", desc: "Market leadership, consistent high-value leads" }
             ].map((phase, index) => (
               <div key={index} className="text-center">
                 <div className="bg-ivory/20 p-4 rounded-lg mb-4">

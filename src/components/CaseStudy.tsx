@@ -11,7 +11,7 @@ const CaseStudy = () => {
     },
     {
       icon: <DollarSign className="w-8 h-8 text-hunter-green" />,
-      value: "$xx",
+      value: "$1.2M",
       label: "In Case Settlements",
       description: "Generated from our lead campaigns"
     },

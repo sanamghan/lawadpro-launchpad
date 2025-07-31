@@ -82,10 +82,6 @@ const Footer = () => {
                 <span className="text-ivory/80 font-inter">hello@lawadpro.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-ivory/80 font-inter">(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
                 <span className="text-ivory/80 font-inter">Nationwide Service</span>
               </div>

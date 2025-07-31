@@ -31,7 +31,7 @@ const Services = () => {
       icon: <UserCheck className="w-12 h-12 text-hunter-green" />,
       title: "Work With An Expert",
       subtitle: "Your account deserves experience—not trial and error.",
-      description: "9+ years of Google Ads mastery focused exclusively on employment law. You get proven strategies, not experiments, with a track record of multi-six-figure case settlements.",
+      description: "9+ years of Google Ads mastery focused on ad formats and optimization. You get proven strategies, not experiments, with a track record of multi-six-figure case settlements.",
       features: [
         "9+ years of Google Ads expertise",
         "Employment law specialization",

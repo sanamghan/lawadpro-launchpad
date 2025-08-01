@@ -26,7 +26,7 @@ const Footer = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('leads')
         .insert({
           name: formData.name,
@@ -35,9 +35,21 @@ const Footer = () => {
           ad_spend: formData.adSpend,
           message: formData.message,
           form_source: 'footer'
-        });
+        })
+        .select();
 
       if (error) throw error;
+
+      // Send email notification
+      try {
+        await supabase.functions.invoke('send-lead-notification', {
+          body: { record: data[0] }
+        });
+        console.log('Email notification sent successfully');
+      } catch (emailError) {
+        console.error('Error sending email notification:', emailError);
+        // Don't show error to user since the lead was saved successfully
+      }
 
       toast({
         title: "Success!",

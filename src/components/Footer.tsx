@@ -1,8 +1,68 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    firmName: "",
+    email: "",
+    adSpend: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('leads')
+        .insert({
+          name: formData.name,
+          firm_name: formData.firmName,
+          email: formData.email,
+          ad_spend: formData.adSpend,
+          message: formData.message,
+          form_source: 'footer'
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Success!",
+        description: "Your strategy call request has been submitted. We'll be in touch soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        firmName: "",
+        email: "",
+        adSpend: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-hunter-green text-ivory">
       {/* Main Footer Content */}
@@ -22,39 +82,58 @@ const Footer = () => {
             <h3 className="text-2xl font-playfair font-bold text-ivory mb-6">
               Book Your Free Strategy Call
             </h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
                   className="px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory placeholder-ivory/70 focus:ring-2 focus:ring-ivory focus:border-ivory font-inter"
                 />
                 <input
                   type="text"
+                  name="firmName"
                   placeholder="Firm Name"
+                  value={formData.firmName}
+                  onChange={handleInputChange}
                   className="px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory placeholder-ivory/70 focus:ring-2 focus:ring-ivory focus:border-ivory font-inter"
                 />
               </div>
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
                 className="w-full px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory placeholder-ivory/70 focus:ring-2 focus:ring-ivory focus:border-ivory font-inter"
               />
-              <select className="w-full px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory focus:ring-2 focus:ring-ivory focus:border-ivory font-inter">
-                <option className="text-hunter-green">Monthly Ad Spend</option>
-                <option className="text-hunter-green">No Current Spend</option>
-                <option className="text-hunter-green">Up to $10K</option>
-                <option className="text-hunter-green">Up to $50K</option>
-                <option className="text-hunter-green">Up to $100K</option>
-                <option className="text-hunter-green">$100K+</option>
+              <select 
+                name="adSpend"
+                value={formData.adSpend}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory focus:ring-2 focus:ring-ivory focus:border-ivory font-inter"
+              >
+                <option value="" className="text-hunter-green">Monthly Ad Spend</option>
+                <option value="No Current Spend" className="text-hunter-green">No Current Spend</option>
+                <option value="Up to $10K" className="text-hunter-green">Up to $10K</option>
+                <option value="Up to $50K" className="text-hunter-green">Up to $50K</option>
+                <option value="Up to $100K" className="text-hunter-green">Up to $100K</option>
+                <option value="$100K+" className="text-hunter-green">$100K+</option>
               </select>
               <textarea
+                name="message"
                 placeholder="What can I help with?"
+                value={formData.message}
+                onChange={handleInputChange}
                 rows={3}
                 className="w-full px-4 py-3 bg-ivory/20 border border-ivory/30 rounded-lg text-ivory placeholder-ivory/70 focus:ring-2 focus:ring-ivory focus:border-ivory font-inter"
               />
-              <Button variant="elegant" size="xl" className="w-full">
-                Scale My Business
+              <Button variant="elegant" size="xl" className="w-full" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Scale My Business"}
               </Button>
             </form>
           </Card>

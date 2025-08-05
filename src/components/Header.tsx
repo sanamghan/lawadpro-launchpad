@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 const Header = () => {
@@ -25,29 +24,23 @@ const Header = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase
-        .from('leads')
-        .insert({
+      const response = await fetch('https://formspree.io/f/xjkoayyg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
-          firm_name: formData.firmName,
+          firmName: formData.firmName,
           email: formData.email,
-          ad_spend: formData.adSpend,
+          adSpend: formData.adSpend,
           message: formData.message,
-          form_source: 'header'
-        })
-        .select();
+          formSource: 'header'
+        }),
+      });
 
-      if (error) throw error;
-
-      // Send email notification
-      try {
-        await supabase.functions.invoke('send-lead-notification', {
-          body: { record: data[0] }
-        });
-        console.log('Email notification sent successfully');
-      } catch (emailError) {
-        console.error('Error sending email notification:', emailError);
-        // Don't show error to user since the lead was saved successfully
+      if (!response.ok) {
+        throw new Error('Form submission failed');
       }
 
       toast({
@@ -64,6 +57,7 @@ const Header = () => {
         message: ""
       });
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "There was a problem submitting your request. Please try again.",
